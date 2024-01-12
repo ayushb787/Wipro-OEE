@@ -56,6 +56,7 @@ class _EnteriesPageTwoWidgetState extends State<EnteriesPageTwoWidget> {
         databaseHelper.getAllSubLosses(widget.loss!);
     sublosses.then((result) {
       print(result);
+      result.sort();
       subLossValues.addAll(result);
       _loadData = false;
     }).catchError((error) {

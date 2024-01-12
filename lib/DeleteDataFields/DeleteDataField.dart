@@ -41,7 +41,7 @@ class _DeleteDataFieldsWidgetState extends State<DeleteDataFieldsWidget> {
 
     List<String> deleteVal =
         deleteDropdownValues.map((map) => map['value'] as String).toList();
-
+    deleteVal.sort();
     deleteValueList.addAll(deleteVal);
     print(deleteValueList);
   }
@@ -54,6 +54,7 @@ class _DeleteDataFieldsWidgetState extends State<DeleteDataFieldsWidget> {
     List<String> lossVal =
         lossDropdownValues.map((map) => map['value'] as String).toList();
     lossValues.addAll(lossVal);
+    lossValues.sort();
     print("lossValues ${lossValues}");
   }
 
@@ -65,6 +66,7 @@ class _DeleteDataFieldsWidgetState extends State<DeleteDataFieldsWidget> {
         await databaseHelper.getAllSubLosses(loss!);
 
     deleteValueList.addAll(deleteDropdownValues);
+    deleteValueList.sort();
     print(deleteValueList);
   }
 

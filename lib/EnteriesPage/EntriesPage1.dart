@@ -79,6 +79,13 @@ class _EnteriesPageOneWidgetState extends State<EnteriesPageOneWidget> {
           pnumberDropdownValues.map((map) => map['value'] as String).toList();
       List<String> lossVal =
           lossDropdownValues.map((map) => map['value'] as String).toList();
+      plantVal.sort();
+      lineVal.sort();
+      machineVal.sort();
+      shiftVal.sort();
+      operatorVal.sort();
+      pnumberVal.sort();
+      lossVal.sort();
       plantValues.addAll(plantVal);
       lineValues.addAll(lineVal);
       machineValues.addAll(machineVal);

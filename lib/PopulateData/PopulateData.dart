@@ -39,6 +39,7 @@ class _PopulateDataWidgetState extends State<PopulateDataWidget> {
         await databaseHelper.getDropdownValuesByType('Loss');
     List<String> lossVal =
         lossDropdownValues.map((map) => map['value'] as String).toList();
+        lossVal.sort();
     lossValues.addAll(lossVal);
     print("lossValues ${lossValues}");
   }
